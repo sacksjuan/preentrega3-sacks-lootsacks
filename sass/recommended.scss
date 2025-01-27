@@ -1,0 +1,48 @@
+@use 'variables' as v;
+
+.recommended {
+  background-color: #2a2a2a;
+  padding: 4rem 1rem;
+  color: white;
+
+  .section-title {
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+  }
+
+  .recommended-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .recommended-card {
+    background: v.$accent-color;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .recommended-info {
+      padding: 1rem;
+    }
+
+    .rating {
+      color: #ffd700;
+      margin: 0.5rem 0;
+    }
+  }
+}
+

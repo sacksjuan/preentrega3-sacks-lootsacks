@@ -1,0 +1,114 @@
+@use 'variables';
+@use 'reset';
+@use 'typography';
+@use 'layout';
+@use 'header';
+@use 'navigation';
+@use 'sidebar';
+@use 'carousel';
+@use 'cards';
+@use 'buttons';
+@use 'search';
+@use 'friends';
+@use 'forms';
+@use 'terms';
+@use 'featured';
+@use 'categories';
+@use 'deals';
+@use 'hero';
+@use 'new-games';
+@use 'recommended';
+@use 'recently-viewed';
+@use 'footer';
+@use 'utilities';
+@use'new-releases';
+@use 'responsive';
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .main-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .sidebar-column {
+    width: 250px;
+    background-color: variables.$secondary-color;
+    padding: 15px;
+  }
+  
+  @media (max-width: variables.$tablet) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+  
+    .sidebar-column {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  
+  // Responsive styles
+  @media (max-width: variables.$tablet) {
+    #navIndex {
+      flex-direction: column;
+      text-align: center;
+  
+      ul {
+        flex-direction: column;
+      }
+  
+      ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
+  
+    .asideBibli {
+      margin-bottom: 20px;
+    }
+  
+    .recently-viewed {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+  
+    .game-card {
+      h2 {
+        font-size: 1rem;
+      }
+  
+      .genre,
+      .price {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
+  @media (max-width: variables.$mobile) {
+    main {
+      padding: 1rem;
+    }
+  
+    .recently-viewed {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  
+    .game-card img {
+      height: 150px;
+    }
+  }
+  
+  

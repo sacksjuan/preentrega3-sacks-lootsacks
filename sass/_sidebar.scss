@@ -1,0 +1,40 @@
+@use 'variables' as v;
+
+aside {
+  background-color: v.$secondary-color;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  h2 {
+    color: v.$primary-color;
+    font-size: 1.50rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid v.$primary-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  a {
+    color: v.$text-color;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+
+    &:hover {
+      color: v.$primary-color;
+    }
+  }
+
+  ul li {
+    margin-bottom: 10px;
+  }
+}
+

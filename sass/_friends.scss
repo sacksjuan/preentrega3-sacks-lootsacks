@@ -1,0 +1,53 @@
+@use 'variables' as v;
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.friend-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .friend-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin: 0 0 0.5rem;
+    color: v.$primary-color;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    color: #7f8c8d;
+  }
+
+  .add-friend-btn {
+    background-color: v.$secondary-color;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: v.$primary-color;
+    }
+  }
+}
+
+.conteinerAmigos {
+  display: flex;
+  justify-content: space-around;
+}
+

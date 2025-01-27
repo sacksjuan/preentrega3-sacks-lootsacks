@@ -1,0 +1,69 @@
+@use 'variables' as v;
+
+.hero {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 2rem 0;
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .featured-game {
+    margin-top: 2rem;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .featured-info {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+
+  .cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+@media (max-width: v.$tablet) {
+  .hero {
+    .featured-game img {
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: v.$mobile) {
+  .hero {
+    .featured-game img {
+      height: 200px;
+    }
+    .featured-info {
+      padding: 1rem;
+    }
+  }
+}
+

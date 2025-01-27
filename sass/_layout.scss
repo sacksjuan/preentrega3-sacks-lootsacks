@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.sidebar-column {
+  width: 250px;
+  background-color: v.$secondary-color;
+  padding: 15px;
+}
+
+@media (max-width: v.$tablet) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar-column {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

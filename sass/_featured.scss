@@ -1,0 +1,33 @@
+@use 'variables' as v;
+
+.featured {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  &-game {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+

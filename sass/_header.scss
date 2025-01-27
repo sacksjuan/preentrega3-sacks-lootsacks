@@ -1,0 +1,119 @@
+@use 'variables' as v;
+
+#headerIndex {
+  background-color: v.$background-color;
+  padding: 1rem;
+}
+
+#navIndex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+#logoCenter img {
+  max-width: 100px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-left: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: v.$text-color;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: v.$primary-color;
+    }
+  }
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: v.$text-color;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: v.$tablet) {
+  #navIndex {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: v.$secondary-color;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  #menu-toggle:checked ~ .menu-icon {
+    span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+}
+
+@media (max-width: v.$mobile) {
+  #logoCenter img {
+    max-width: 80px;
+  }
+
+  .nav-menu {
+    a {
+      font-size: 0.9rem;
+    }
+  }
+}
+

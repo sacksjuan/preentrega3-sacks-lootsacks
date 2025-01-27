@@ -1,0 +1,60 @@
+@use 'variables' as v;
+
+#contact-form {
+  .form-label {
+    font-weight: bold;
+  }
+
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 5px v.$primary-color;
+      border-color: v.$primary-color;
+    }
+  }
+
+  .btn {
+    background-color: v.$accent-color;
+    border-color: v.$accent-color;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+      background-color: v.$primary-color;
+      border-color: v.$primary-color;
+    }
+  }
+
+  label {
+    color: v.$primary-color;
+  }
+}
+
+#contactoForm {
+  h2, h3 {
+    color: v.$primary-color;
+  }
+
+  li, p {
+    color: white;
+  }
+}
+
+.list-unstyled {
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    i {
+      color: v.$primary-color;
+      margin-right: 10px;
+    }
+  }
+}
+
