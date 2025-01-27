@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding-right: 1rem;
 }
 
 .sidebar-column {
