@@ -1,8 +1,18 @@
 @use 'variables' as v;
 
+body {
+  margin: 0;
+  padding-top: 60px; 
+}
+
 #headerIndex {
-  background-color: v.$background-color;
-  padding: 1rem;
+  background-color: rgba(v.$background-color, 0.9);
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #navIndex {
@@ -11,25 +21,23 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-}
 
-.logo-container {
-  flex: 0 0 auto;
-}
-
-#logoCenter img {
-  max-width: 100px;
-  height: auto;
+  .logo-container {
+    #logoCenter img {
+      max-width: 90px;
+      height: auto;
+    }
+  }
 }
 
 .nav-menu {
   display: flex;
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
 
   li {
-    margin-left: 1rem;
+    margin: 0 0.5rem;
   }
 
   a {
@@ -44,76 +52,28 @@
   }
 }
 
-#menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  padding: 10px;
-
-  span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: v.$text-color;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-}
-
 @media (max-width: v.$tablet) {
   #navIndex {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: v.$secondary-color;
-    padding: 1rem;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
+    flex-wrap: wrap;
+    justify-content: center;
 
     li {
-      margin: 0.5rem 0;
-    }
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  #menu-toggle:checked ~ .nav-menu {
-    display: flex;
-  }
-
-  #menu-toggle:checked ~ .menu-icon {
-    span:nth-child(1) {
-      transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    span:nth-child(2) {
-      opacity: 0;
-    }
-    span:nth-child(3) {
-      transform: rotate(45deg) translate(-5px, -6px);
+      margin: 0.5rem;
     }
   }
 }
 
 @media (max-width: v.$mobile) {
-  #logoCenter img {
-    max-width: 80px;
+  .logo-container #logoCenter img {
+    max-width: 50px;
   }
 
-  .nav-menu {
-    a {
-      font-size: 0.9rem;
-    }
+  .nav-menu a {
+    font-size: 1.0rem;
   }
 }
-
